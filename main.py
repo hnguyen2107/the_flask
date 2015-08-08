@@ -1,5 +1,5 @@
 from flask import Flask
-from flask import render_html
+from flask import render_template
 
 app = Flask(__name__)
 
@@ -10,7 +10,7 @@ def index():
 
 @app.route('/airbnb')
 def airbnb():
-	return render_html('airbnb.html')
+    return render_template('airbnb.html')
 
 if __name__ == '__main__':
     app.run()
